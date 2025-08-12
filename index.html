@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdel Bingo</title>
+  <link rel="shortcut icon" href="https://static-cdn.jtvnw.net/emoticons/v2/52/default/dark/1.0" type="image/x-icon">
   <style>
     * {
       margin: 0;
@@ -20,7 +22,7 @@
 
     .content {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(7, 1fr);
       gap: 10px;
       justify-items: end;
       max-width: 600px;
@@ -42,46 +44,75 @@
       display: flex;
       cursor: pointer;
     }
-  </style>
-  <script defer>
-    function select(element) {
-      const currentColor = window.getComputedStyle(element).backgroundColor;
 
-      if (currentColor === "rgb(32, 32, 32)") {
-        element.style.backgroundColor = "#71de3c";
-      } else {
-        element.style.backgroundColor = "#202020";
-      }
+    .title {
+      color: #fff;
+      padding: 15px 0 0 10px;
+      font-size: 30px;
     }
 
-  </script>
+    .description {
+      color: orange;
+      font-size: 18px;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="title">ABDEL BINGO<img src="https://static-cdn.jtvnw.net/emoticons/v2/52/default/dark/1.0" alt="emoji"></div>
+  <div class="description">⚠️Clique sur un objectif pour l'accomplir⚠️</div>
   <div class="content">
-    <div class="item"onclick="select(this);">On dirait un micro</div>
-    <div class="item"onclick="select(this);">tout simplement</div>
-    <div class="item"onclick="select(this);">tu chante bien</div>
-    <div class="item"onclick="select(this);">je révéle pas la conv</div>
-    <div class="item"onclick="select(this);">ma mémoire me fait pas defaut</div>
-    <div class="item"onclick="select(this);">paradoxa<br />lement</div>
-    <div class="item"onclick="select(this);">abdel chante</div>
-    <div class="item"onclick="select(this);">je reconnais les fakes fams</div>
-    <div class="item"onclick="select(this);">bledard de merde</div>
-    <div class="item"onclick="select(this);">maitresse sandra</div>
-    <div class="item"onclick="select(this);">t drole</div>
-    <div class="item"onclick="select(this);">penset a toi en mangant tacos</div>
-    <div class="item"onclick="select(this);">abdel soumis</div>
-    <div class="item"onclick="select(this);">je parle que avec toi</div>
-    <div class="item"onclick="select(this);">abdel raciste</div>
-    <div class="item"onclick="select(this);">prend soin de toi</div>
-    <div class="item"onclick="select(this);">jolie voix</div>
-    <div class="item"onclick="select(this);">voila</div>
-    <div class="item"onclick="select(this);">je réduit la cigarette</div>
-    <div class="item"onclick="select(this);">33 ans je connais les réseaux</div>
-    <div class="item"onclick="select(this);">t qlq de honette</div>
-    <div class="item"onclick="select(this);">je BLACk list</div>
-    <div class="item"onclick="select(this);">c mignion comme tout</div>
+    <div class="item" onclick="select(this, 20);">On dirait ta un micro</div>
+    <div class="item" onclick="select(this, 2);">tout simplement</div>
+    <div class="item" onclick="select(this, 11);">je révéle pas la conv</div>
+    <div class="item" onclick="select(this, 9);">ma mémoire me fait pas defaut</div>
+    <div class="item" onclick="select(this, 26);">paradoxa<br />lement</div>
+    <div class="item" onclick="select(this, 1);">abdel chante</div>
+    <!-- <div class="item" onclick="select(this);">je reconnais les fakes fams</div> -->
+    <div class="item" onclick="select(this, 4);">bledard de merde</div>
+    <div class="item" onclick="select(this, 14);">maitresse sandra</div>
+    <div class="item" onclick="select(this, 10);">t drole</div>
+    <div class="item" onclick="select(this, 7);">prend soin de toi</div>
+    <div class="item" onclick="select(this, 5);">ta une jolie voix</div>
+    <div class="item" onclick="select(this, 8);">voila</div>
+    <div class="item" onclick="select(this, 16);">je réduit la cigarette</div>
+    <div class="item" onclick="select(this, 12);">33 ans je connais les réseaux</div>
+    <div class="item" onclick="select(this, 15);">je BLACk list</div>
+    <div class="item" onclick="select(this, 3);">c mignion comme tout</div>
+    <div class="item" onclick="select(this, 6);">ta une bonne personalité</div>
+    <div class="item" onclick="select(this, 13);">Ch'uis un bon lecheur</div>
+    <div class="item" onclick="select(this, 17);">tu te pleins rarement</div>
+    <div class="item" onclick="select(this, 19)">t pas naif</div>
+    <div class="item" onclick="select(this, 18)">c des cassos</div>
+    <div class="item" onclick="select(this, 21)">penser a toi en mangent tacos</div>
+    <div class="item" onclick="select(this, 22)">t une grande mangeuse</div>
+    <div class="item" onclick="select(this, 24)">t charmante</div>
+    <div class="item" onclick="select(this, 23)">j'te fait des bisous</div>
+    <div class="item" onclick="select(this, 25)">tu chante bien</div>
+    <div class="item" onclick="select(this, 27)">j'ai confiance en toi</div>
   </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  function select(element, vid) {
+    const currentColor = window.getComputedStyle(element).backgroundColor;
+
+    if (currentColor === "rgb(32, 32, 32)" || currentColor === "rgb(131, 12, 12)") {
+      let sound = new Audio('song/' + vid + '.mp3');
+      sound.play();
+      element.style.backgroundColor = "#71de3c";
+
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    } else {
+      element.style.backgroundColor = "#202020";
+    }
+  }
+</script>
+
 </body>
+
 </html>
