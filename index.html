@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdel Bingo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    body {
+      background-color: #333533;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      justify-items: end;
+      max-width: 600px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .item {
+      padding: 15px;
+      width: 50px;
+      white-space: normal;
+      overflow-wrap: break-word;
+      background-color: #202020;
+      color: #fff;
+      border-radius: 10px;
+      margin: 12px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      cursor: pointer;
+    }
+  </style>
+  <script defer>
+    function select(element) {
+      const currentColor = window.getComputedStyle(element).backgroundColor;
+
+      if (currentColor === "rgb(32, 32, 32)") {
+        element.style.backgroundColor = "#71de3c";
+      } else {
+        element.style.backgroundColor = "#202020";
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="content">
+    <div class="item"onclick="select(this);">On dirait un micro</div>
+    <div class="item"onclick="select(this);">tout simplement</div>
+    <div class="item"onclick="select(this);">tu chante bien</div>
+    <div class="item"onclick="select(this);">je révéle pas la conv</div>
+    <div class="item"onclick="select(this);">ma mémoire me fait pas defaut</div>
+    <div class="item"onclick="select(this);">paradoxa<br />lement</div>
+    <div class="item"onclick="select(this);">abdel chante</div>
+    <div class="item"onclick="select(this);">je reconnais les fakes fams</div>
+    <div class="item"onclick="select(this);">bledard de merde</div>
+    <div class="item"onclick="select(this);">maitresse sandra</div>
+    <div class="item"onclick="select(this);">t drole</div>
+    <div class="item"onclick="select(this);">penset a toi en mangant tacos</div>
+    <div class="item"onclick="select(this);">abdel soumis</div>
+    <div class="item"onclick="select(this);">je parle que avec toi</div>
+    <div class="item"onclick="select(this);">abdel raciste</div>
+    <div class="item"onclick="select(this);">prend soin de toi</div>
+    <div class="item"onclick="select(this);">jolie voix</div>
+    <div class="item"onclick="select(this);">voila</div>
+    <div class="item"onclick="select(this);">je réduit la cigarette</div>
+    <div class="item"onclick="select(this);">33 ans je connais les réseaux</div>
+    <div class="item"onclick="select(this);">t qlq de honette</div>
+    <div class="item"onclick="select(this);">je BLACk list</div>
+    <div class="item"onclick="select(this);">c mignion comme tout</div>
+  </div>
+</body>
+</html>
