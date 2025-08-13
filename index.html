@@ -22,7 +22,7 @@
 
     .content {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(8, 1fr);
       gap: 10px;
       justify-items: end;
       max-width: 600px;
@@ -50,17 +50,10 @@
       padding: 15px 0 0 10px;
       font-size: 30px;
     }
-
-    .description {
-      color: orange;
-      font-size: 18px;
-    }
   </style>
 </head>
-
 <body>
   <div class="title">ABDEL BINGO<img src="https://static-cdn.jtvnw.net/emoticons/v2/52/default/dark/1.0" alt="emoji"></div>
-  <div class="description">⚠️Clique sur un objectif pour l'accomplir⚠️</div>
   <div class="content">
     <div class="item" onclick="select(this, 20);">On dirait ta un micro</div>
     <div class="item" onclick="select(this, 2);">tout simplement</div>
@@ -68,7 +61,6 @@
     <div class="item" onclick="select(this, 9);">ma mémoire me fait pas defaut</div>
     <div class="item" onclick="select(this, 26);">paradoxa<br />lement</div>
     <div class="item" onclick="select(this, 1);">abdel chante</div>
-    <!-- <div class="item" onclick="select(this);">je reconnais les fakes fams</div> -->
     <div class="item" onclick="select(this, 4);">bledard de merde</div>
     <div class="item" onclick="select(this, 14);">maitresse sandra</div>
     <div class="item" onclick="select(this, 10);">t drole</div>
@@ -90,6 +82,11 @@
     <div class="item" onclick="select(this, 23)">j'te fait des bisous</div>
     <div class="item" onclick="select(this, 25)">tu chante bien</div>
     <div class="item" onclick="select(this, 27)">j'ai confiance en toi</div>
+    <div class="item" onclick="select(this, 28)">ca m'exiterais</div>
+    <div class="item" onclick="select(this, 29)">y a des bons et des mauvais</div>
+    <div class="item" onclick="select(this, 30)">je suis née a paris</div>
+    <!-- <div class="item" onclick="select(this);">je reconnais les fakes fams</div> -->
+    <!-- <div class="item" onclick="select(this);">ca fait 8ans je bois pas de coca</div> -->
   </div>
   
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -103,8 +100,8 @@
       element.style.backgroundColor = "#71de3c";
 
       confetti({
-        particleCount: 100,
-        spread: 70,
+        particleCount: 400,
+        spread: 1000,
         origin: { y: 0.6 }
       });
     } else {
