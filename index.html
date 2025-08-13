@@ -22,12 +22,12 @@
 
     .content {
       display: flex;
-      grid-template-columns: repeat(8, 1fr);
       gap: 10px;
       justify-items: end;
       max-width: 100%;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Verdana;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .item {
@@ -46,10 +46,17 @@
       cursor: pointer;
     }
 
+    .item:hover {
+      background-color: rgb(24, 22, 22);
+    }
+
     .title {
       color: #fff;
       padding: 15px 0 0 10px;
       font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
@@ -86,6 +93,9 @@
     <div class="item" onclick="select(this, 28)">ca m'exiterais</div>
     <div class="item" onclick="select(this, 29)">y a des bons et des mauvais</div>
     <div class="item" onclick="select(this, 30)">je suis née a paris</div>
+    <div class="item" onclick="select(this, 31)">j'crois tout ce que tu me dis</div>
+    <div class="item" onclick="select(this, 32)">c original</div>
+    <div class="item" onclick="select(this, 33)">t pas rentrée dans son jeu</div>
     <!-- <div class="item" onclick="select(this);">je reconnais les fakes fams</div> -->
     <!-- <div class="item" onclick="select(this);">ca fait 8ans je bois pas de coca</div> -->
   </div>
@@ -95,7 +105,7 @@
   function select(element, vid) {
     const currentColor = window.getComputedStyle(element).backgroundColor;
 
-    if (currentColor === "rgb(32, 32, 32)" || currentColor === "rgb(131, 12, 12)") {
+    if (currentColor === "rgb(32, 32, 32)" || currentColor === "rgb(24, 22, 22)") {
       let sound = new Audio('song/' + vid + '.mp3');
       sound.play();
       element.style.backgroundColor = "#71de3c";
