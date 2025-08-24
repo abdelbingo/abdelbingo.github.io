@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,10 +57,16 @@
       align-items: center;
       justify-content: center;
     }
+    .desc {
+      color: orange;
+      font-size: 20px;
+      margin-left: 50px;
+    }
   </style>
 </head>
 <body>
   <div class="title">ABDEL BINGO<img src="https://static-cdn.jtvnw.net/emoticons/v2/52/default/dark/1.0" alt="emoji"></div>
+  <div class="desc">À partir de "t'es pas rentrée dans son jeu", c'est des nouveaux trucs</div>
   <div class="content">
     <div class="item" onclick="select(this, 20);">On dirait ta un micro</div>
     <div class="item" onclick="select(this, 2);">tout simplement</div>
@@ -96,6 +101,9 @@
     <div class="item" onclick="select(this, 31)">j'crois tout ce que tu me dis</div>
     <div class="item" onclick="select(this, 32)">c original</div>
     <div class="item" onclick="select(this, 33)">t pas rentrée dans son jeu</div>
+    <div class="item" onclick="select(this, 34)">a 1h02 y a plus de modo</div>
+    <div class="item" onclick="select(this, 35)">MashAllah</div>
+    <!-- <div class="item" onclick="select(this, 36)">MDR</div> -->
     <!-- <div class="item" onclick="select(this);">je reconnais les fakes fams</div> -->
     <!-- <div class="item" onclick="select(this);">ca fait 8ans je bois pas de coca</div> -->
   </div>
@@ -117,11 +125,8 @@
       });
     } else {
       element.style.backgroundColor = "#202020";
-    }
-  }
+    };
+  };
 </script>
-
 </body>
-
 </html>
-
